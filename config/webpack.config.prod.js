@@ -4,10 +4,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: [
-    './src/driver.scss',
-    './src/index.js',
-  ],
+  entry: ['./src/driver.scss', './src/index.js'],
   output: {
     path: path.join(__dirname, '/../dist'),
     publicPath: '/dist/',
@@ -44,6 +41,9 @@ module.exports = {
         ]),
       },
     ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
   plugins: [
     new ExtractTextPlugin({
