@@ -239,9 +239,11 @@ export default class Popover extends Element {
     this.footerNode.style.display = 'block';
     if (this.options.isFirst) {
       this.prevBtnNode.classList.add(CLASS_BTN_DISABLED);
+      this.prevBtnNode.tabIndex = -1;
       this.nextBtnNode.innerHTML = this.options.startBtnText;
     } else {
       this.prevBtnNode.classList.remove(CLASS_BTN_DISABLED);
+      this.prevBtnNode.tabIndex = 0;
     }
 
     if (this.options.isLast) {
