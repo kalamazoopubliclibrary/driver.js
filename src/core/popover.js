@@ -217,6 +217,7 @@ export default class Popover extends Element {
       // @todo modify CSS to use block
       if (this.options.showNextButton) {
         this.nextBtnNode.style.display = 'inline-block';
+        this.nextBtnNode.focus();
       } else {
         this.nextBtnNode.style.display = 'none';
       }
