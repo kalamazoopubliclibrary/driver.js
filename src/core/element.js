@@ -337,6 +337,10 @@ export default class Element {
     }
 
     this.popover.hide();
+
+    if (this.options.onHidePopover) {
+      this.options.onHidePopover(this);
+    }
   }
 
   /**
